@@ -1,0 +1,2 @@
+from process_image.remove_shadow import remove_shadow
+from process_image.rotate_image import rotate
