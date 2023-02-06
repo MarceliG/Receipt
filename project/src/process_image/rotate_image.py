@@ -13,7 +13,8 @@ def detect_angle(image):
     # text and white lines
     rms = lambda x_seq: (sum(x * x for x in x_seq) / len(x_seq)) ** (1 / 2)
     r = array([rms(line) for line in sinogram.transpose()])
-    angle = argmax(r) - 90
+    angle = argmax(r)
+    # angle = argmax(r) -90
     return angle
 
 

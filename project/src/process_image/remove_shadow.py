@@ -1,10 +1,8 @@
 import cv2
 import numpy as np
-from operation import load_image
 
 
-def remove_shadow(image_name: str):
-    image = load_image(image_name)
+def remove_shadow(image: str):
     rgb_planes = cv2.split(image)
 
     result_norm_planes = []
@@ -21,8 +19,5 @@ def remove_shadow(image_name: str):
             dtype=cv2.CV_8UC1,
         )
         result_norm_planes.append(norm_img)
-
     result_norm = cv2.merge(result_norm_planes)
-
     return result_norm
-    # cv2.imwrite(path, result_norm)
