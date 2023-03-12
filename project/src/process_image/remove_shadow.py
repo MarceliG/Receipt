@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
+from numpy import typing as npt
 
 
-def remove_shadow(image: str):
+def remove_shadow(image: npt.NDArray[np.float_]) -> npt.NDArray[np.float_]:
     rgb_planes = cv2.split(image)
-
     result_norm_planes = []
     for plane in rgb_planes:
         dilated_img = cv2.dilate(plane, np.ones((7, 7), np.uint8))
@@ -19,5 +19,5 @@ def remove_shadow(image: str):
             dtype=cv2.CV_8UC1,
         )
         result_norm_planes.append(norm_img)
-    result_norm = cv2.merge(result_norm_planes)
+    result_norm: npt.NDArray[np.float_] = cv2.merge(result_norm_planes)
     return result_norm

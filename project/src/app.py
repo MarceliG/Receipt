@@ -1,12 +1,12 @@
 from operation import load_image
-from process_image import remove_shadow, rotate, get_dataFrame_text_from_image
+from process_image import get_dataFrame_text_from_image, remove_shadow, rotate
 
 
 def main():
     image = load_image(image_name="bill.jpg")
-    image1 = remove_shadow(image=image)
-    image2 = rotate(image=image1)
-    image_textdata = get_dataFrame_text_from_image(image=image2)
+    image = remove_shadow(image)
+    image = rotate(image)
+    image_textdata = get_dataFrame_text_from_image(image)
     return image_textdata
 
 
