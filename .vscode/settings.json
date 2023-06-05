@@ -1,7 +1,7 @@
 {
     "python.terminal.activateEnvironment": true,
     "python.analysis.autoImportCompletions": true,
-    "python.formatting.provider": "black",
+    "python.formatting.provider": "none",
     "python.formatting.blackArgs": [
         "--line-length",
         "79"
@@ -22,4 +22,7 @@
         "~/.local/lib/Google/google_appengine",
         "~/.local/lib/Google/google_appengine/lib/flask-0.12"
     ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
 }
