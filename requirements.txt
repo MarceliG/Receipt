@@ -45,3 +45,5 @@ tox==4.4.6
 traitlets==5.9.0
 virtualenv==20.20.0
 wcwidth==0.2.6
+mypy==1.4.1
+mypy-extensions==1.0.0
