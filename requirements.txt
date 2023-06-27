@@ -47,3 +47,4 @@ virtualenv==20.20.0
 wcwidth==0.2.6
 mypy==1.4.1
 mypy-extensions==1.0.0
+opencv-python==4.7.0.72
