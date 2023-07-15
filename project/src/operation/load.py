@@ -17,6 +17,7 @@ from config import PHOTOS_DIR
 #         raise Exception("Incorrect path")
 
 
+# TODO chanege to load orginal image and second function loaad resize image
 def load_image(
     image_name: str,
     dimension_resize: int = 800,
