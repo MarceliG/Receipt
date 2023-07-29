@@ -1,40 +1,11 @@
 import cv2
 import matplotlib.pyplot as plt
 from skimage.filters import threshold_local
-import os
-from const import PHOTOS_DIR
 
 
 class ImageProcessor:
     def __init__(self):
         pass
-
-    def load_image(
-        self,
-        image_name,
-        dimension_resize=800,
-        interpolation=cv2.INTER_LANCZOS4,
-    ):
-        path = os.path.realpath(os.path.join(PHOTOS_DIR, image_name))
-        if os.path.exists(path):
-            image = cv2.imread(path)
-            height, width = image.shape[:2]
-
-            if height > width:
-                new_height = dimension_resize
-                new_width = int(width * (dimension_resize / height))
-            else:
-                new_width = dimension_resize
-                new_height = int(height * (dimension_resize / width))
-
-            resized_image = cv2.resize(
-                image,
-                (new_width, new_height),
-                interpolation=interpolation,
-            )
-            return resized_image
-        else:
-            raise Exception("Incorrect path")
 
     def opencv_resize(self, image, ratio):
         width = int(image.shape[1] * ratio)
