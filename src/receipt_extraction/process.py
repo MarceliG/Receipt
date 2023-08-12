@@ -25,3 +25,25 @@ class ImageProcessor:
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         T = threshold_local(gray, 21, offset=5, method="gaussian")
         return (gray > T).astype("uint8") * 255
+
+
+def image_resize(image, width=None, height=None):
+    dim_resize = None
+    (h, w) = image.shape[:2]
+
+    # if both the width and height are None, then return the original image
+    if width is None and height is None:
+        return image
+
+    # if the width is None
+    if width is None:
+        r = height / float(h)
+        dim_resize = (int(w * r), height)
+    # if the height is None
+    else:
+        r = width / float(w)
+        dim_resize = (width, int(h * r))
+
+    # resize the image
+    resized_image = cv2.resize(image, dim_resize, interpolation=cv2.INTER_AREA)
+    return resized_image

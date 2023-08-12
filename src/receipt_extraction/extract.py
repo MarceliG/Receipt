@@ -2,14 +2,13 @@ import cv2
 from detector import ReceiptDetector
 from process import ImageProcessor
 import os
-from const import RECEIPT_DIR
 
-if __name__ == "__main__":
+
+def extract_receipt(image_path):
     image_processor = ImageProcessor()
     receipt_detector = ReceiptDetector()
 
-    file_name = "/home/marceli/Receipt/project/data/photos/curve_2.jpg"
-    image = cv2.imread(file_name)
+    image = cv2.imread(image_path)
 
     resize_ratio = 500 / image.shape[0]
     original = image.copy()
