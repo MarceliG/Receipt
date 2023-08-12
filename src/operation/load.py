@@ -3,7 +3,7 @@ import os
 import cv2
 
 # import numpy as np
-from config import PHOTOS_DIR
+from utils import PHOTOS_DIR
 
 # from numpy import typing as npt
 
