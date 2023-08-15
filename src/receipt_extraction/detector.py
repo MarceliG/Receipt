@@ -45,7 +45,7 @@ class ReceiptDetector:
         # our final dimensions
         maxWidth = max(int(widthA), int(widthB))
         maxHeight = max(int(heightA), int(heightB))
-        # destination points which will be used to map 
+        # destination points which will be used to map
         # the screen to a "scanned" view
         dst = np.array(
             [

@@ -1,9 +1,6 @@
 import os
-
 import cv2
-
-# import numpy as np
-from utils import PHOTOS_DIR
+from const import PHTOTOS_INPUT
 
 
 # TODO chanege to load orginal image and second function loaad resize image
@@ -12,7 +9,7 @@ def load_image(
     dimension_resize: int = 800,
     interpolation: int = cv2.INTER_LANCZOS4,
 ):
-    path = os.path.realpath(os.path.join(PHOTOS_DIR, image_name))
+    path = os.path.realpath(os.path.join(PHTOTOS_INPUT, image_name))
     if os.path.exists(path):
         image = cv2.imread(path)
         height, width = image.shape[:2]

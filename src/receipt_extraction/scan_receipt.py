@@ -2,9 +2,6 @@
 import cv2
 import matplotlib.pyplot as plt
 import pytesseract
-
-# import re
-
 from pytesseract import Output
 
 

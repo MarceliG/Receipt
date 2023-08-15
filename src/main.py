@@ -1,4 +1,5 @@
-from operation import load_image
+from utils.load import load_image
+
 from process_image import get_dataFrame_text_from_image, remove_shadow, rotate
 
 

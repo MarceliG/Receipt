@@ -1,18 +1,20 @@
+import os
+
 import cv2
 from detector import ReceiptDetector
-from process import ImageProcessor
-import os
+from process import ImageProcessor, image_resize
 
 
 def extract_receipt(image_path):
-    image_processor = ImageProcessor()
+    # image_processor = ImageProcessor()
     receipt_detector = ReceiptDetector()
 
     image = cv2.imread(image_path)
 
     resize_ratio = 500 / image.shape[0]
     original = image.copy()
-    image = image_processor.opencv_resize(image, resize_ratio)
+    image = image_resize(image, width=resize_ratio)
+    # image = image_processor.opencv_resize(image, resize_ratio)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # Get rid of noise with Gaussian Blur filter
