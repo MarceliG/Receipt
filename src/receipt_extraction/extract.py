@@ -3,7 +3,7 @@ import os
 import cv2
 from detector import ReceiptDetector
 from process import ImageProcessor, image_resize
-
+from utils.const import PHTOTOS_OUTPUT
 
 def extract_receipt(image_path):
     # image_processor = ImageProcessor()
@@ -42,7 +42,7 @@ def extract_receipt(image_path):
     scanned_rgb = cv2.cvtColor(scanned, cv2.COLOR_BGR2RGB)
 
     # Saving the image
-    save_path = os.path.join(RECEIPT_DIR, "receipt.png")
+    save_path = os.path.join(PHTOTOS_OUTPUT, "receipt.png")
     print(save_path)
     cv2.imwrite(save_path, scanned_rgb)
 
