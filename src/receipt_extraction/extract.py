@@ -2,7 +2,7 @@ import os
 
 import cv2
 from detector import ReceiptDetector
-from process import ImageProcessor, image_resize
+from process import image_resize
 from utils.const import PHTOTOS_OUTPUT
 
 def extract_receipt(image_path):

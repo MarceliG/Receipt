@@ -1,27 +1,14 @@
 {
     "python.terminal.activateEnvironment": true,
     "python.analysis.autoImportCompletions": true,
-    "python.formatting.provider": "none",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "79"
-    ],
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true,
-    // "python.linting.flake8Args": ["--ignore=E24,W504", "--verbose"],
-    // "python.linting.pydocstyleArgs": ["--ignore=D400", "--ignore=D4"],
     "terminal.integrated.fontSize": 16,
     "editor.formatOnSave": true,
     "editor.rulers": [
-        79
+        88
     ],
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#25834f"
     },
-    "python.analysis.extraPaths": [
-        "~/.local/lib/Google/google_appengine",
-        "~/.local/lib/Google/google_appengine/lib/flask-0.12"
-    ],
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
