@@ -16,7 +16,6 @@ def remove_shadow(image: npt.NDArray[np.float_]) -> npt.NDArray[np.float_]:
             alpha=0,
             beta=255,
             norm_type=cv2.NORM_MINMAX,
-            dtype=cv2.CV_8UC1,
         )
         result_norm_planes.append(norm_img)
     result_norm: npt.NDArray[np.float_] = cv2.merge(result_norm_planes)

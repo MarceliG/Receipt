@@ -5,6 +5,7 @@ from detector import ReceiptDetector
 from process import image_resize
 from utils.const import PHTOTOS_OUTPUT
 
+
 def extract_receipt(image_path):
     # image_processor = ImageProcessor()
     receipt_detector = ReceiptDetector()
@@ -59,7 +60,11 @@ def extract_receipt(image_path):
     #     output = image.copy()
     #     cv2.drawContours(output, [approx], -1, (0, 255, 0), 3)
     #     text = "eps={:.4f}, num_pts={}".format(eps, len(approx))
-    #     cv2.putText(output, text, (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+    #     cv2.putText(output,
+    #             text,
+    #             (x, y - 15),
+    #             cv2.FONT_HERSHEY_SIMPLEX,
+    #             0.9, (0, 255, 0), 2)
     #     # show the approximated contour image
     #     print("[INFO] {}".format(text))
     #     if len(approx) <= 4:
