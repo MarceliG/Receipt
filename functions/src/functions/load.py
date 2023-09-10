@@ -31,4 +31,4 @@ def load_image(
             (new_width, new_height),
             interpolation=interpolation,
         )
-        return resized_image
+    return resized_image
