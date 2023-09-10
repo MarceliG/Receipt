@@ -10,6 +10,12 @@
         "editorRuler.foreground": "#25834f"
     },
     "[python]": {
+        "editor.codeActionsOnSave": {
+          "source.fixAll.ruff": true,
+          "source.organizeImports.ruff": true
+        },
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
+
 }
+    
