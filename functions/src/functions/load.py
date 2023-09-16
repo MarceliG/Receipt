@@ -7,6 +7,20 @@ import numpy as np
 from functions.const import PHTOTOS_INPUT
 
 
+def load_original_image(image_name: str) -> Optional[np.ndarray]:
+    """Load original image.
+
+    Args:
+        image_name (str): image name from database.
+
+    Returns:
+        image: return image by numpy array.
+    """
+    image = cv2.imread(os.path.join(PHTOTOS_INPUT, image_name))
+    return image
+
+    # (h, w, c) = image.shape[:3]
+
 # TODO chanege to load orginal image and second function loaad resize image
 def load_image(
     image_name: str,
